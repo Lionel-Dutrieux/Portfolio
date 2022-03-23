@@ -1,11 +1,17 @@
 <script setup>
-import FullPage from './template/FullPage.vue';
+import Home from './views/Home.vue';
+
+
 
 </script>
 
 <template>
-  <FullPage />
+  <Home />
 </template>
 
 <style>
+@import "devicon/devicon.min.css";
+html {
+  font-size: 10px;
+}
 </style>
