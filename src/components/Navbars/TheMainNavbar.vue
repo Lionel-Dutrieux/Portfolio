@@ -9,14 +9,17 @@ import IconLink from '../Links/IconLink.vue';
     <div class="navbar">
         <TheLDLink />
         <div class="navbar__links">
-            <NavigationLink href="#" isActive="true">Home</NavigationLink>
-            <NavigationLink href="#">About me</NavigationLink>
-            <NavigationLink href="#">Technologies</NavigationLink>
-            <NavigationLink href="#">Projects</NavigationLink>
+            <NavigationLink anchor="Welcome">Home</NavigationLink>
+            <NavigationLink anchor="About">About me</NavigationLink>
+            <NavigationLink anchor="Technologies">Technologies</NavigationLink>
+            <NavigationLink anchor="Projects">Projects</NavigationLink>
         </div>
         <div class="navbar__social-network">
-            <IconLink icon="devicon-linkedin-plain" href="#">LinkedIn</IconLink>
-            <IconLink icon="devicon-github-plain" href="#">GitHub</IconLink>
+            <IconLink
+                icon="devicon-linkedin-plain"
+                href="https://www.linkedin.com/in/lionel-dutrieux-2833201a3/"
+            >LinkedIn</IconLink>
+            <IconLink icon="devicon-github-plain" href="https://github.com/Lionel-Dutrieux">GitHub</IconLink>
         </div>
     </div>
 </template>
@@ -34,10 +37,7 @@ import IconLink from '../Links/IconLink.vue';
     justify-content: space-around;
     align-items: center;
 
-    &__links {
-        display: flex;
-    }
-
+    &__links,
     &__social-network {
         display: flex;
     }
