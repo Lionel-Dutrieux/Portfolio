@@ -9,6 +9,7 @@ const props = defineProps({
     text: {
         type: String,
         default: "",
+        required: true,
     },
     subtext: {
         type: String,
@@ -23,7 +24,7 @@ const props = defineProps({
         <span class="stat__number">{{ number }}</span>
         <div class="stat__container">
             <p class="stat__text">{{ text }}</p>
-            <p class="stat__subtext">{{ subtext }}</p>
+            <p class="stat__subtext" v-if="subtext">{{ subtext }}</p>
         </div>
     </div>
 </template>

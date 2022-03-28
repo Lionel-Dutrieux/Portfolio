@@ -32,8 +32,6 @@ function initFullPage() {
         <TheWelcomePage />
         <TheWelcomePage />
         <TheWelcomePage />
-        <section class="section">Some section</section>
-        <section class="section">Some section</section>
     </div>
 </template>
 

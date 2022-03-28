@@ -1,4 +1,5 @@
-<script setup>import { onMounted, ref } from 'vue';
+<script setup>
+import { onMounted, ref } from 'vue';
 import { useStore } from 'vuex';
 
 let link = ref();
