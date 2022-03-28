@@ -3,6 +3,7 @@ import fullpage from "fullpage.js"
 import { onMounted, ref } from "vue";
 import { useStore } from "vuex";
 import TheWelcomePage from "../components/Fullpage/TheWelcomePage.vue";
+import TheAboutPage from "../components/Fullpage/TheAboutPage.vue";
 
 const store = useStore();
 
@@ -29,9 +30,7 @@ function initFullPage() {
 <template>
     <div id="fullpage">
         <TheWelcomePage />
-        <TheWelcomePage />
-        <TheWelcomePage />
-        <TheWelcomePage />
+        <TheAboutPage />
     </div>
 </template>
 
