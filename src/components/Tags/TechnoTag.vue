@@ -17,6 +17,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .tag {
+    box-sizing: border-box;
     display: inline-block;
     font-family: "Roboto Mono";
     font-style: normal;

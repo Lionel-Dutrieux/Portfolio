@@ -11,9 +11,7 @@
 <style lang="scss" scoped>
 .tag-container {
     display: flex;
-
-    & > :not(:last-child) {
-        margin-right: 1.4rem;
-    }
+    gap: 1.4rem;
+    flex-wrap: wrap;
 }
 </style>

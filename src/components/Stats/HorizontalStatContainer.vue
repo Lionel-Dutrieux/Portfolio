@@ -10,8 +10,7 @@
 
 <style lang="scss" scoped>
 .stat-container {
-    & > :not(:last-child) {
-        margin-right: 10rem;
-    }
+    display: flex;
+    gap: 10rem;
 }
 </style>

@@ -5,6 +5,7 @@ import { useStore } from "vuex";
 import TheWelcomePage from "../components/Fullpage/TheWelcomePage.vue";
 import TheAboutPage from "../components/Fullpage/TheAboutPage.vue";
 import TheTechnologiesPage from "../components/Fullpage/TheTechnologiesPage.vue";
+import TheProjectsPage from "../components/Fullpage/TheProjectsPage.vue";
 
 const store = useStore();
 
@@ -33,6 +34,7 @@ function initFullPage() {
         <TheWelcomePage />
         <TheAboutPage />
         <TheTechnologiesPage />
+        <TheProjectsPage />
     </div>
 </template>
 
