@@ -4,6 +4,7 @@ import { onMounted, ref } from "vue";
 import { useStore } from "vuex";
 import TheWelcomePage from "../components/Fullpage/TheWelcomePage.vue";
 import TheAboutPage from "../components/Fullpage/TheAboutPage.vue";
+import TheTechnologiesPage from "../components/Fullpage/TheTechnologiesPage.vue";
 
 const store = useStore();
 
@@ -31,6 +32,7 @@ function initFullPage() {
     <div id="fullpage">
         <TheWelcomePage />
         <TheAboutPage />
+        <TheTechnologiesPage />
     </div>
 </template>
 
