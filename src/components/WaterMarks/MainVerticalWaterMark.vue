@@ -13,12 +13,16 @@
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
-    font-size: 10rem;
-    line-height: 175%;
+    font-size: 8rem;
+    line-height: 15rem;
 
     text-transform: uppercase;
-
+    writing-mode: vertical-lr;
     color: rgba(153, 153, 153, 0.1);
-    transform: rotate(-90deg) translateX(22rem) translateY(-22rem);
+    transform: rotate(-180deg);
+
+    position: absolute;
+    bottom: 5rem;
+    left: 0rem;
 }
 </style>

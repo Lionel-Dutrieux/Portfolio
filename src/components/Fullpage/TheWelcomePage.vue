@@ -46,7 +46,7 @@ import LeftNumberStat from "../Stats/LeftNumberStat.vue";
             </TextSection>
             <TheAvatarSection />
         </MainPageMargin>
-        <MainVerticalWaterMark class="page__watermark">PORTFOLIO</MainVerticalWaterMark>
+        <MainVerticalWaterMark>&lt;PORTFOLIO/&gt;</MainVerticalWaterMark>
     </section>
 </template>
 
@@ -80,13 +80,6 @@ import LeftNumberStat from "../Stats/LeftNumberStat.vue";
         bottom: 6rem;
         display: flex;
         align-content: flex-start;
-    }
-
-    &__watermark {
-        display: inline-block;
-        position: absolute;
-        bottom: 5rem;
-        left: 0rem;
     }
 }
 

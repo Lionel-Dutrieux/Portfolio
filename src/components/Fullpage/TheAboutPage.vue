@@ -6,6 +6,7 @@ import TextSection from "../Section/TextSection.vue";
 import MainTitle from "../Titles/MainTitle.vue";
 import MainParagraph from "../Paragraphs/MainParagraph.vue";
 import PrimaryLink from "../Links/PrimaryLink.vue";
+import MainVerticalWaterMark from "../WaterMarks/MainVerticalWaterMark.vue";
 
 </script>
 
@@ -42,6 +43,7 @@ import PrimaryLink from "../Links/PrimaryLink.vue";
                 </template>
             </TextSection>
         </MainPageMargin>
+        <MainVerticalWaterMark>&lt;ABOUT ME/&gt;</MainVerticalWaterMark>
     </section>
 </template>
 

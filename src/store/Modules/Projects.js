@@ -31,6 +31,7 @@ const moduleProjects = {
 			return state.projects;
 		},
 		getProjectsWithFilter(state) {
+			if (state.filter.length === 0) return state.projects;
 			return state.projects.filter(function (project) {
 				return project.technologies.find((technology) =>
 					state.filter.includes(technology.name)

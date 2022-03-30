@@ -3,6 +3,7 @@ import TheMainNavbar from '../Navbars/TheMainNavbar.vue';
 import MainPageMargin from '../Margins/MainPageMargin.vue';
 import TechnoCard from '../Cards/TechnoCard.vue';
 import MainTitle from '../Titles/MainTitle.vue';
+import MainVerticalWaterMark from '../WaterMarks/MainVerticalWaterMark.vue';
 
 
 </script>
@@ -381,6 +382,7 @@ import MainTitle from '../Titles/MainTitle.vue';
                 </div>
             </div>
         </MainPageMargin>
+        <MainVerticalWaterMark>&lt;TECHNOLOGIES/&gt;</MainVerticalWaterMark>
     </section>
 </template>
 

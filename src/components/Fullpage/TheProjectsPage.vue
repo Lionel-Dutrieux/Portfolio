@@ -5,23 +5,22 @@ import ProjectCard from '../Cards/ProjectCard.vue';
 
 import { useStore } from 'vuex';
 import TheTechnologiesFilterButtons from '../Buttons/TheTechnologiesFilterButtons.vue';
+import MainVerticalWaterMark from '../WaterMarks/MainVerticalWaterMark.vue';
 
 const store = useStore();
 
-store.commit("SET_FILTER", store.getters.getTechnologies.map(technology => technology.name));
 store.commit("ADD_PROJECT", { technologies: store.getters.getTechnologiesByNames(["C#", "VueJs", "Flutter"]), name: "Cryptomulator", description: "Web And Mobile application that simulates crypto currency investment based on real datas" });
 store.commit("ADD_PROJECT", { technologies: store.getters.getTechnologiesByNames(["Java", "C++"]), name: "SecCon", description: "Network project for transfering encrypted files via TCP" });
-store.commit("ADD_PROJECT", { technologies: store.getters.getTechnologiesByNames(["Java", "C++"]), name: "SecCon", description: "Network project for transfering encrypted files via TCP" });
-store.commit("ADD_PROJECT", { technologies: store.getters.getTechnologiesByNames(["Java", "C++"]), name: "SecCon", description: "Network project for transfering encrypted files via TCP" });
-store.commit("ADD_PROJECT", { technologies: store.getters.getTechnologiesByNames(["Java", "C++"]), name: "SecCon", description: "Network project for transfering encrypted files via TCP" });
-store.commit("ADD_PROJECT", { technologies: store.getters.getTechnologiesByNames(["Java", "C++", "Kubernetes"]), name: "SecCon", description: "Network project for transfering encrypted files via TCP" });
 </script>
 
 <template>
     <section class="section page">
         <TheMainNavbar />
         <MainPageMargin class="container">
-            <TheTechnologiesFilterButtons />
+            <TheTechnologiesFilterButtons
+                class="page__filter"
+                v-show="store.getters.section == 'Projects'"
+            />
             <div class="page__projects">
                 <TransitionGroup name="list" type="animation">
                     <ProjectCard
@@ -33,6 +32,7 @@ store.commit("ADD_PROJECT", { technologies: store.getters.getTechnologiesByNames
                 </TransitionGroup>
             </div>
         </MainPageMargin>
+        <MainVerticalWaterMark>&lt;PROJECTS/&gt;</MainVerticalWaterMark>
     </section>
 </template>
 
@@ -40,6 +40,10 @@ store.commit("ADD_PROJECT", { technologies: store.getters.getTechnologiesByNames
 .page {
     z-index: 0;
     background-color: #232428;
+
+    &__filter {
+        animation: opacity 0.5s;
+    }
 
     &__projects {
         display: grid;
@@ -78,6 +82,15 @@ store.commit("ADD_PROJECT", { technologies: store.getters.getTechnologiesByNames
     100% {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 </style>
