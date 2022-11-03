@@ -11,5 +11,5 @@ const props = defineProps({
 
 
 <template>
-    <BaseOutline :text="props.text" color="#151515" background="#f5f8ff" size="5px" />
+    <BaseOutline :text="props.text" color="#151515" background="#f5f8ff" size="4px" />
 </template>
