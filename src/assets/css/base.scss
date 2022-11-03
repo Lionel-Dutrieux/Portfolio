@@ -1,7 +1,25 @@
 @import "reset.scss";
 @import "fonts.scss";
+@import "variables.scss";
 
 html {
 	font-family: "Montserrat";
 	font-size: 10px;
+}
+
+.primary-underline {
+	position: relative;
+	z-index: 0;
+
+	&::before {
+		z-index: -1;
+		content: "";
+		position: absolute;
+		bottom: 0.6rem;
+		height: 1.5rem;
+		width: 100%;
+
+		background-color: #faebb2;
+		border-radius: 0.3px;
+	}
 }
