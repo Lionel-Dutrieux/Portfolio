@@ -37,9 +37,26 @@ button {
     background: var(--dark-bg-color);
     color: #FFF;
 
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+        background-color: #000;
+        color: var(--primary-color);
+    }
+
+    &:focus-visible {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
     &.outline {
         color: var(--dark-bg-color);
         background-color: var(--light-bg-color);
+
+        &:hover {
+            background-color: var(--dark-bg-color);
+            color: var(--primary-color);
+        }
     }
 }
 </style>
