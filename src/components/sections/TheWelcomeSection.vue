@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import DarkButton from '../buttons/DarkButton.vue';
 import HelloEmojiIcon from '../icons/HelloEmojiIcon.vue';
-import DarkOutline from "../outlines/DarkOutline.vue"
-import LightOutline from "../outlines/LightOutline.vue"
+import DarkOutline from "../outlines/DarkOutline.vue";
+import LightOutline from "../outlines/LightOutline.vue";
+
+import { ArrowLongRightIcon } from '@heroicons/vue/24/solid'
 </script>
 
 <template>
@@ -19,7 +21,10 @@ import LightOutline from "../outlines/LightOutline.vue"
             <span class="primary-underline">Software Engineer</span> based in <span class="country">Belgium</span>
         </h2>
         <div class="welcome__buttons">
-            <DarkButton>My Works</DarkButton>
+            <DarkButton class="button">
+                My Works
+                <ArrowLongRightIcon class="icon" />
+            </DarkButton>
             <DarkButton :outline="true">Contact-me</DarkButton>
         </div>
     </section>
@@ -39,6 +44,13 @@ import LightOutline from "../outlines/LightOutline.vue"
         .emoji {
             width: 3rem;
             height: 3rem;
+
+            animation-name: wave-animation;
+            animation-duration: 2.5s;
+            animation-delay: 0.5s;
+            animation-iteration-count: infinite;
+            transform-origin: 60% 70%;
+            display: inline-block;
         }
 
         p {
@@ -75,7 +87,53 @@ import LightOutline from "../outlines/LightOutline.vue"
         display: flex;
         gap: 2rem;
 
-        margin-top: 3rem;
+        margin-top: 2rem;
+
+        .button {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .icon {
+            width: 2.4rem;
+        }
+    }
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0.0deg)
     }
 }
 </style>
