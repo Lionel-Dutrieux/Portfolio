@@ -5,3 +5,11 @@
 
 	--primary-color: #faebb2;
 }
+
+$breakpoints: (
+	small: 50em,
+	medium: 76.8em,
+	large: 102.4em,
+	larger: 128em,
+	extra-large: 144em,
+);
